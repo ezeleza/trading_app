@@ -5,3 +5,8 @@
     "max_losing_streak": 3,
     "watchlist": ["BTC", "ETH", "BNB", "ADA", "SOL"]
 }
+{
+    "account_balance": 5000,
+    "risk_percent": 1,
+    "watchlist": ["BTC", "ETH", "BNB", "ADA", "SOL"]
+}
