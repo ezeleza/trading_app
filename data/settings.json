@@ -1,0 +1,6 @@
+{
+    "account_balance": 5000,
+    "risk_per_trade": 1,
+    "tp_percent": "15-20",
+    "max_losing_streak": 3
+}
