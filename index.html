@@ -3,49 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ezedin's Trading App</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Trading Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js library -->
 </head>
 <body>
-
     <header>
-        <h1>📊 Ezedin's Trading Dashboard</h1>
+        <h1>📊 Personal Trading Dashboard</h1>
     </header>
 
     <main>
-        <!-- Account Balance -->
+        <!-- Account Overview -->
         <section class="card">
             <h2>Account Overview</h2>
-            <p>Balance: <span id="balance">$5000</span></p>
-            <p>Progress: <span id="progress">0%</span></p>
+            <label>Balance: $<input type="number" id="balance-input" step="0.01"></label>
+            <br><br>
+            <label>Progress: <input type="text" id="progress-display" readonly> %</label>
         </section>
 
         <!-- Watchlist -->
         <section class="card">
             <h2>Watchlist</h2>
             <ul id="watchlist"></ul>
+            <div id="coin-details"></div>
         </section>
 
         <!-- Trade Journal -->
         <section class="card">
             <h2>Trade Journal</h2>
-            <ul id="journal"></ul>
+            <table id="trade-journal">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Coin</th>
+                        <th>Entry Price</th>
+                        <th>Exit Price</th>
+                        <th>Position Size</th>
+                        <th>P/L $</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <br>
+            <button id="add-trade">➕ Add Trade</button>
         </section>
 
-        <!-- Notifications -->
+        <!-- Progress Charts -->
         <section class="card">
-            <h2>Notifications</h2>
-            <ul id="notifications"></ul>
+            <h2>Progress Charts</h2>
+            <canvas id="dailyChart"></canvas>
+            <canvas id="weeklyChart"></canvas>
+            <canvas id="monthlyChart"></canvas>
         </section>
     </main>
 
-    <script src="js/app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
-
-<!-- Watchlist -->
-<section class="card">
-    <h2>Watchlist</h2>
-    <ul id="watchlist"></ul>
-    <div id="coin-details" style="margin-top: 10px; font-size: 14px;"></div>
-</section>

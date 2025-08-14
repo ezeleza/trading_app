@@ -1,12 +1,11 @@
 {
     "account_balance": 5000,
-    "risk_per_trade": 1,
-    "tp_percent": "15-20",
-    "max_losing_streak": 3,
-    "watchlist": ["BTC", "ETH", "BNB", "ADA", "SOL"]
-}
-{
-    "account_balance": 5000,
     "risk_percent": 1,
-    "watchlist": ["BTC", "ETH", "BNB", "ADA", "SOL"]
+    "watchlist": [
+        { "symbol": "BTC", "id": "bitcoin" },
+        { "symbol": "ETH", "id": "ethereum" },
+        { "symbol": "BNB", "id": "binancecoin" },
+        { "symbol": "ADA", "id": "cardano" },
+        { "symbol": "SOL", "id": "solana" }
+    ]
 }
